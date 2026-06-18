@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rami &amp; Yasmeen — August 27th, 2026</title>
+    <meta
+      name="description"
+      content="Join us to celebrate the wedding of Rami al Zayat & Yasmeen Sidani."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Parisienne&family=Pinyon+Script&family=EB+Garamond:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="parchment-container">
+      <!-- Sunshine light rays at the top (rays injected by JS) -->
+      <div class="light-rays" aria-hidden="true"></div>
+
+      <!-- =========================================================
+       HIDDEN STATIC FORM — Netlify detects this at deploy time.
+       Field names here MUST match what js/script.js submits.
+       Do not delete. Guests never see this.
+  ========================================================== -->
+      <form name="rsvp" data-netlify="true" netlify-honeypot="bot-field" hidden>
+        <input type="text" name="inviteCode" />
+        <input type="text" name="partyTitle" />
+        <textarea name="responses"></textarea>
+        <input type="text" name="songRequest" />
+        <textarea name="message"></textarea>
+        <input type="text" name="bot-field" />
+      </form>
+
+      <!-- ============================ HERO ============================ -->
+      <header class="hero reveal">
+        <p class="eyebrow">
+          We have the pleasure of inviting you <br />to celebrate the wedding of
+        </p>
+        <h1 class="names">
+          <span>Rami<br /><small>al Zayat</small></span>
+          <span class="amp">&amp;</span>
+          <span>Yasmeen<br /><small>Sidani</small></span>
+        </h1>
+        <p class="details">
+          <strong>August 27<sup>th</sup>, 2026</strong><br />
+          at Liza, Beirut · Ashrafieh<br />
+          starting 8:00 PM
+        </p>
+        <div class="hero-art">
+          <img src="images/couple.png" alt="Rami and Yasmeen in the garden" />
+        </div>
+        <div class="scroll-cue" aria-hidden="true">❦</div>
+      </header>
+
+      <main>
+        <!-- ===================== RESERVATIONS / RSVP ===================== -->
+        <section id="rsvp" class="section section--rsvp reveal">
+          <h2 class="script-title">Reservations</h2>
+          <p class="kindly">
+            Kindly reserve your place by
+            <strong>July 10<sup>th</sup></strong>
+          </p>
+          <img
+            class="section-art venue"
+            src="images/venue-house.png"
+            alt="Venue"
+            aria-hidden="true"
+          />
+
+          <!-- Shown when no/invalid invite code -->
+          <div id="rsvp-lookup" class="rsvp-lookup" hidden>
+            <p>
+              Welcome! Please enter the invitation code printed on your invite:
+            </p>
+            <div class="lookup-row">
+              <input
+                type="text"
+                id="code-input"
+                placeholder="e.g. diba"
+                autocomplete="off"
+              />
+              <button type="button" id="code-go" class="btn">
+                Find my invitation
+              </button>
+            </div>
+            <p id="lookup-error" class="error" hidden>
+              We couldn't find that code — please check your invitation or
+              message the couple.
+            </p>
+          </div>
+
+          <!-- The live RSVP form, built by JS -->
+          <form id="rsvp-form" class="rsvp-form" hidden>
+            <p class="greeting" id="greeting"></p>
+            <div id="members" class="members"><!-- rows injected here --></div>
+
+            <!-- Song request — part of the RSVP so it submits together -->
+            <div class="song-request">
+              <img
+                class="section-art envelope"
+                src="images/envelope-heart.png"
+                alt=""
+                aria-hidden="true"
+              />
+              <h3 class="sub-title">Help us fill the dance floor</h3>
+              <p class="song-note">tell us a song that will get you dancing</p>
+              <input
+                type="text"
+                id="song-input"
+                class="song-input"
+                placeholder="Song title &amp; artist"
+                autocomplete="off"
+              />
+            </div>
+
+            <button type="submit" class="btn btn--confirm">Confirm</button>
+            <!-- <p class="form-note">
+              You can update your reply any time before July 10th by reopening
+              your link.
+            </p> -->
+          </form>
+
+          <!-- Thank-you state -->
+          <div id="rsvp-thanks" class="rsvp-thanks" hidden>
+            <p class="script-title small">Thank you!</p>
+            <p id="thanks-summary"></p>
+            <button type="button" id="edit-again" class="btn btn--ghost">
+              Edit my reply
+            </button>
+          </div>
+        </section>
+
+        <!-- ========================= LOCATION ========================= -->
+        <section id="location" class="section section--location reveal">
+          <h2 class="script-title">Find your way</h2>
+          <img
+            class="map"
+            src="images/map.png"
+            alt="Hand-drawn map to Liza, Ashrafieh"
+          />
+          <a
+            class="map-link"
+            href="https://maps.google.com/?q=Liza+Beirut+Ashrafieh"
+            target="_blank"
+            rel="noopener"
+            >Open in Google Maps →</a
+          >
+        </section>
+
+        <!-- ========================= GIFT ========================= -->
+        <section id="gift" class="section section--gift reveal">
+          <h2 class="script-title sharing-title">
+            Sharing our special day with you <br />is the greatest gift of all
+          </h2>
+          <p class="gift-note">
+            Should you wish to contribute to our beginning this new chapter<br />
+            together, you'll find our details below.
+          </p>
+          <img class="cake" src="images/cake.png" alt="" aria-hidden="true" />
+
+          <div class="gift-card">
+            <p><span>Beneficiaries</span> Rami al Zayat &amp; Yasmeen Sidani</p>
+            <p><span>IBAN</span> LB00 0000 0000 0000 0000 0000 0000</p>
+            <p><span>BIC</span> BANKLBBX</p>
+            <p><span>Country</span> Lebanon</p>
+          </div>
+        </section>
+
+        <div class="monogram-group">
+          <img class="monogram" src="images/monogram.png" alt="R &amp; Y" />
+          <p>With love, Rami &amp; Yasmeen <br />27.08.2026</p>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <img
+          class="hedge"
+          src="images/hedge-border.png"
+          alt=""
+          aria-hidden="true"
+        />
+        <!-- Floating critters (decorative) -->
+        <div class="critters-group">
+          <img
+            class="critter critter--bowtie"
+            src="images/cat-bowtie.png"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            class="critter critter--winged"
+            src="images/cat-winged.png"
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

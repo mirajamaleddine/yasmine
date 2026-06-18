@@ -1,0 +1,16 @@
+{
+  "_README": "Each key is an invite code. Send each guest/family a link ending in ?c=THEIRCODE — e.g. https://yoursite.netlify.app/?c=diba . 'title' is shown as a greeting. 'members' is the list of people on that invitation. For a single guest, just give one member. Codes are case-insensitive. Keep them short, memorable, and hard to guess if you like (you can add numbers).",
+
+  "diba": {
+    "title": "The Diba Family",
+    "members": ["Ghassan Diba", "Nadia Naji", "Ahmad Diba", "Ayman Diba", "Lana Diba"]
+  },
+  "sidani-a": {
+    "title": "Amal Sidani",
+    "members": ["Amal Sidani"]
+  },
+  "khoury": {
+    "title": "Tarek & Maya Khoury",
+    "members": ["Tarek Khoury", "Maya Khoury"]
+  }
+}

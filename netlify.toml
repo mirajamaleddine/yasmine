@@ -1,0 +1,9 @@
+# Netlify config — plain static site, no build step needed.
+[build]
+  publish = "."
+
+# Nice-to-have: cache images for speed
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"

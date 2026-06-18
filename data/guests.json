@@ -1,16 +1,442 @@
 {
-  "_README": "Each key is an invite code. Send each guest/family a link ending in ?c=THEIRCODE — e.g. https://yoursite.netlify.app/?c=diba . 'title' is shown as a greeting. 'members' is the list of people on that invitation. For a single guest, just give one member. Codes are case-insensitive. Keep them short, memorable, and hard to guess if you like (you can add numbers).",
-
-  "diba": {
-    "title": "The Diba Family",
-    "members": ["Ghassan Diba", "Nadia Naji", "Ahmad Diba", "Ayman Diba", "Lana Diba"]
+  "_README": "Auto-generated from the Google Sheet. Each key = first word of the group name + the row ID (so existing codes never change when you add new rows). 'title' fills the greeting: Dear [title], we'd be honoured by your company. Send each invite the link  https://YOUR-SITE.netlify.app/?c=KEY",
+  "katorgi1": {
+    "title": "Katorgi Family",
+    "members": [
+      "Maher Katorgi",
+      "Kawthar Katorgi",
+      "Rania Katorgi"
+    ]
   },
-  "sidani-a": {
-    "title": "Amal Sidani",
-    "members": ["Amal Sidani"]
+  "hakim2": {
+    "title": "Hakim Family",
+    "members": [
+      "Saadi Hakim"
+    ]
   },
-  "khoury": {
-    "title": "Tarek & Maya Khoury",
-    "members": ["Tarek Khoury", "Maya Khoury"]
+  "masri3": {
+    "title": "Masri Family",
+    "members": [
+      "Khodor El Masri",
+      "Joumana Edelbi Masri"
+    ]
+  },
+  "sidani4": {
+    "title": "Sidani Family",
+    "members": [
+      "Nabil Sidani",
+      "Maryam Sidani"
+    ]
+  },
+  "lama5": {
+    "title": "Lama",
+    "members": [
+      "Lama Kowatly"
+    ]
+  },
+  "jana6": {
+    "title": "Jana & Jad",
+    "members": [
+      "Jana Jamaleddine",
+      "Jad Zawil"
+    ]
+  },
+  "mira7": {
+    "title": "Mira",
+    "members": [
+      "Mira Jamaleddine"
+    ]
+  },
+  "ali8": {
+    "title": "Ali",
+    "members": [
+      "Ali Jomaa"
+    ]
+  },
+  "dana9": {
+    "title": "Dana",
+    "members": [
+      "Dana Chami"
+    ]
+  },
+  "mariam10": {
+    "title": "Mariam",
+    "members": [
+      "Mariam Makkouk"
+    ]
+  },
+  "tannir11": {
+    "title": "Tannir Family",
+    "members": [
+      "Abed Tannir",
+      "Rima Tannir"
+    ]
+  },
+  "el12": {
+    "title": "El Zein Family",
+    "members": [
+      "Nour El Zein",
+      "Aya El Zein"
+    ]
+  },
+  "ghalia13": {
+    "title": "Ghalia",
+    "members": [
+      "Ghalia Khalili"
+    ]
+  },
+  "lynn14": {
+    "title": "Lynn",
+    "members": [
+      "Lynn El Hishi"
+    ]
+  },
+  "el15": {
+    "title": "El Ayache Family",
+    "members": [
+      "Farah El Ayache",
+      "Dima El Ayache"
+    ]
+  },
+  "zouzou16": {
+    "title": "Zouzou",
+    "members": [
+      "Zeinab Darwish"
+    ]
+  },
+  "balaa17": {
+    "title": "Balaa Family",
+    "members": [
+      "Salah Balaa",
+      "Malak Itani Balaa"
+    ]
+  },
+  "balaa18": {
+    "title": "Balaa Family",
+    "members": [
+      "Tarek Balaa",
+      "Joyce Balaa"
+    ]
+  },
+  "lama19": {
+    "title": "Lama & Wael",
+    "members": [
+      "Lama Rayess",
+      "Wael Al Orabi"
+    ]
+  },
+  "zeina20": {
+    "title": "Zeina & Fouad",
+    "members": [
+      "Zeina Al Haffar",
+      "Fouad El Attar"
+    ]
+  },
+  "mohannad21": {
+    "title": "Mohannad & Maya",
+    "members": [
+      "Mohannad Abou Daher",
+      "Maya Rabih"
+    ]
+  },
+  "karine22": {
+    "title": "Karine",
+    "members": [
+      "Karine Ismail"
+    ]
+  },
+  "arij23": {
+    "title": "Arij",
+    "members": [
+      "Arij Allaw"
+    ]
+  },
+  "riwa24": {
+    "title": "Riwa & Hadi",
+    "members": [
+      "Riwa Husseini",
+      "Hadi Al Houshaimi"
+    ]
+  },
+  "corinne25": {
+    "title": "Corinne",
+    "members": [
+      "Corinne Ghorayeb"
+    ]
+  },
+  "jude26": {
+    "title": "Jude",
+    "members": [
+      "Jude Al Momani"
+    ]
+  },
+  "ibrahim27": {
+    "title": "Ibrahim",
+    "members": [
+      "Ibrahim Al Masri"
+    ]
+  },
+  "ziad28": {
+    "title": "Ziad Family",
+    "members": [
+      "Ziad Diabmarzouk",
+      "Lamis El-Masri",
+      "Tarek Diabmarzouk"
+    ]
+  },
+  "ahmad29": {
+    "title": "Ahmad",
+    "members": [
+      "Ahmad Diabmarzouk"
+    ]
+  },
+  "omar30": {
+    "title": "Omar & Sadaf",
+    "members": [
+      "Omar Diabmarzouk",
+      "Sadaf Sana"
+    ]
+  },
+  "rawane31": {
+    "title": "Rawane",
+    "members": [
+      "Rawane El-Khatib"
+    ]
+  },
+  "annan32": {
+    "title": "Annan Family",
+    "members": [
+      "Adnan Annan",
+      "Nada Annan"
+    ]
+  },
+  "layanne33": {
+    "title": "Layanne & Adnan",
+    "members": [
+      "Adnan Annan",
+      "Layanne Annan"
+    ]
+  },
+  "kanafani34": {
+    "title": "Kanafani Family",
+    "members": [
+      "Mr. Zouheir Kanafani",
+      "Mrs. Kanafani"
+    ]
+  },
+  "tala35": {
+    "title": "Tala",
+    "members": [
+      "Tala Aridi"
+    ]
+  },
+  "mneimneh36": {
+    "title": "Mneimneh Family",
+    "members": [
+      "Hisham Mneimneh",
+      "Sawsan Naji",
+      "Karim Mneimneh",
+      "Dina Mneimneh"
+    ]
+  },
+  "tiba37": {
+    "title": "Tiba Family",
+    "members": [
+      "Ghassan Tiba",
+      "Nadia Naji",
+      "Ahmad Tiba",
+      "Ayman Tiba",
+      "Lana Tiba"
+    ]
+  },
+  "rifai38": {
+    "title": "Rifai Family",
+    "members": [
+      "Wafaa Naji",
+      "Samer Rifai"
+    ]
+  },
+  "rifai39": {
+    "title": "Rifai Family",
+    "members": [
+      "Ahmad Rifai",
+      "Nadine Rifai"
+    ]
+  },
+  "hadi40": {
+    "title": "Hadi & Yara",
+    "members": [
+      "Hadi Haidar",
+      "Yara Haidar"
+    ]
+  },
+  "samual41": {
+    "title": "Samual & Marwa",
+    "members": [
+      "Samuel Freiha",
+      "Marwa Saad"
+    ]
+  },
+  "ghadeer42": {
+    "title": "Ghadeer",
+    "members": [
+      "Ghadeer Zalghout"
+    ]
+  },
+  "hasan43": {
+    "title": "Hasan",
+    "members": [
+      "Hasan Mheidly"
+    ]
+  },
+  "malak44": {
+    "title": "Malak",
+    "members": [
+      "Malak Hasbini"
+    ]
+  },
+  "al45": {
+    "title": "Al Zayat Family",
+    "members": [
+      "Bassem Al Zayat",
+      "Joumana Al Zayat",
+      "Mohammad Al Zayat"
+    ]
+  },
+  "al46": {
+    "title": "Al Zayat Family",
+    "members": [
+      "Samir Al Zayat",
+      "Rana Al Zayat"
+    ]
+  },
+  "mneinmen47": {
+    "title": "Mneinmen Family",
+    "members": [
+      "Bilal Mneinmeh",
+      "Randa Al Zayat",
+      "Mohammad Mneinmeh"
+    ]
+  },
+  "mneinmeh48": {
+    "title": "Mneinmeh Family",
+    "members": [
+      "Sawsan Al Zayat",
+      "Shadi Mneimenh"
+    ]
+  },
+  "hasan49": {
+    "title": "Hasan",
+    "members": [
+      "Hasan Mohammed"
+    ]
+  },
+  "ahmad50": {
+    "title": "Ahmad & Adam",
+    "members": [
+      "Ahmad Khatib",
+      "Adam Khatib"
+    ]
+  },
+  "el51": {
+    "title": "El Gendi Family",
+    "members": [
+      "Hoda Farhat",
+      "Mirna El Gendi"
+    ]
+  },
+  "rayan52": {
+    "title": "Rayan",
+    "members": [
+      "Rayan Ajram"
+    ]
+  },
+  "saiid53": {
+    "title": "Saiid",
+    "members": [
+      "Saiid Baghdadi"
+    ]
+  },
+  "sami54": {
+    "title": "Sami",
+    "members": [
+      "Sami Arakji"
+    ]
+  },
+  "melissa55": {
+    "title": "Melissa",
+    "members": [
+      "Melissa Francis"
+    ]
+  },
+  "elias56": {
+    "title": "Elias",
+    "members": [
+      "Elias Mansour"
+    ]
+  },
+  "karim57": {
+    "title": "Karim",
+    "members": [
+      "Karim Bahlawan"
+    ]
+  },
+  "nada58": {
+    "title": "Nada",
+    "members": [
+      "Nada Farhat"
+    ]
+  },
+  "nariman59": {
+    "title": "Nariman",
+    "members": [
+      "Nariman Hattab"
+    ]
+  },
+  "mohammad60": {
+    "title": "Mohammad & Haya",
+    "members": [
+      "Mohammad Daoud",
+      "Haya Zaatari"
+    ]
+  },
+  "shah61": {
+    "title": "Shah Family",
+    "members": [
+      "Mr. Ahmed Shah",
+      "Mrs. Shah"
+    ]
+  },
+  "karim62": {
+    "title": "Karim",
+    "members": [
+      "Karim Kawoukji"
+    ]
+  },
+  "farah63": {
+    "title": "Farah",
+    "members": [
+      "Farah Houssami"
+    ]
+  },
+  "may64": {
+    "title": "May & Iyad",
+    "members": [
+      "May Farhat",
+      "Iyad Kanj"
+    ]
+  },
+  "shaza65": {
+    "title": "Shaza",
+    "members": [
+      "Shaza Afifi"
+    ]
+  },
+  "grace66": {
+    "title": "Grace & Lampert",
+    "members": [
+      "Grace Berdkan",
+      "Jona Lampert"
+    ]
   }
 }

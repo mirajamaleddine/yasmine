@@ -594,6 +594,7 @@ strong {
   justify-content: center;
   gap: 1rem;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 .gift-card {
   max-width: 460px;
@@ -605,6 +606,7 @@ strong {
   text-align: left;
   font-family: "Cinzel";
   text-align: center;
+  flex: 1;
 }
 .gift-card p {
   margin: 0.35rem 0;

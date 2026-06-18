@@ -823,6 +823,13 @@ strong {
     display: block;
     width: auto;
   }
+  /* Show the whole garden scene (incl. the pond) on phones instead of a
+     heavily zoomed-in crop. */
+  .cover__bg {
+    background-size: 150%;
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }
 }
 
 /* ----------------------- Reduced-motion respect --------------------- */

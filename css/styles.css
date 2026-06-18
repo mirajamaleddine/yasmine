@@ -505,25 +505,29 @@ strong {
   display: flex;
   align-items: end;
   justify-content: center;
-  gap: 1rem;
+  gap: 0;
 }
 .critter {
-  /* position: fixed; */
   z-index: 5;
   pointer-events: none;
   width: 25%;
   opacity: 0.95;
   filter: drop-shadow(0 6px 6px rgba(0, 0, 0, 0.12));
+  transition: transform 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+/* The two cats start pushed apart... */
+.critter--bowtie {
+  transform: translateX(-65%);
 }
 .critter--winged {
-  top: 18%;
-  left: -120px;
-  /* animation: fly-across 26s linear infinite; */
+  transform: translateX(65%);
 }
-.critter--bowtie {
-  bottom: 4%;
-  left: -100px;
-  /* animation: trot-across 34s linear infinite; */
+/* ...and drift together for a little kiss once the footer is in view */
+.critters-group.together .critter--bowtie {
+  transform: translateX(10%);
+}
+.critters-group.together .critter--winged {
+  transform: translateX(-10%);
 }
 
 /* ----------------------------- Animations --------------------------- */
@@ -679,6 +683,9 @@ strong {
   .monogram,
   .envelope {
     animation: none !important;
+  }
+  .critter {
+    transition: none !important;
   }
   .reveal {
     opacity: 1;

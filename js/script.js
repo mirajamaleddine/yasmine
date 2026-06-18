@@ -48,6 +48,27 @@ document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
   }
 })();
 
+/* ---------- 2c. Footer cats drift together for a kiss ---------- */
+(function catKiss() {
+  const group = document.querySelector(".critters-group");
+  if (!group) return;
+  // With reduced motion, skip the slide and just show them together.
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    group.classList.add("together");
+    return;
+  }
+  // Bring them together once the grass has scrolled up into the lower
+  // part of the screen (i.e. the invitee has reached the end).
+  function update() {
+    const r = group.getBoundingClientRect();
+    const inView = r.top < window.innerHeight * 0.85 && r.bottom > 0;
+    group.classList.toggle("together", inView);
+  }
+  window.addEventListener("scroll", update, { passive: true });
+  window.addEventListener("resize", update);
+  update();
+})();
+
 /* ---------- 3. RSVP ---------- */
 const lookupBox = document.getElementById("rsvp-lookup");
 const lookupErr = document.getElementById("lookup-error");

@@ -61,7 +61,7 @@ document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
     const angle = base + (Math.random() * 6 - 3);
     ray.style.setProperty("--a", angle.toFixed(2) + "deg");
     ray.style.setProperty("--o", (0.28 + Math.random() * 0.4).toFixed(2));
-    ray.style.setProperty("--dur", (3.5 + Math.random() * 3).toFixed(1) + "s");
+    ray.style.setProperty("--dur", (2 + Math.random() * 2).toFixed(1) + "s");
     ray.style.animationDelay = "-" + (Math.random() * 4).toFixed(1) + "s";
     ray.style.width = (5 + Math.random() * 5).toFixed(1) + "vw";
     host.appendChild(ray);

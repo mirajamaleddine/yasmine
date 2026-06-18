@@ -2,6 +2,26 @@
    Rami & Yasmeen — RSVP logic + gentle magic
 ============================================================ */
 
+/* ---------- 0. Invitation cover ---------- */
+(function invitationCover() {
+  const cover = document.getElementById("cover");
+  if (!cover) {
+    document.body.classList.remove("cover-locked");
+    return;
+  }
+  let opened = false;
+  function open() {
+    if (opened) return;
+    opened = true;
+    cover.classList.add("is-open");
+    document.body.classList.remove("cover-locked");
+    // hide once the doors have finished sliding so it can't block clicks
+    setTimeout(() => { cover.style.display = "none"; }, 1300);
+  }
+  // The whole cover is tappable (the seal is just the focal point).
+  cover.addEventListener("click", open);
+})();
+
 /* ---------- 1. Scroll-reveal ---------- */
 const io = new IntersectionObserver((entries) => {
   entries.forEach((e) => { if (e.isIntersecting) e.target.classList.add("in"); });

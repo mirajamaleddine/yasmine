@@ -19,7 +19,26 @@
 
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body>
+  <body class="cover-locked">
+    <!-- ===================== INVITATION COVER =====================
+         Full-screen sealed cover shown on load. Tapping the seal
+         splits it open (like doors) to reveal the site.
+    ============================================================ -->
+    <div class="cover" id="cover">
+      <div class="cover__half cover__half--left"><div class="cover__bg"></div></div>
+      <div class="cover__half cover__half--right"><div class="cover__bg"></div></div>
+      <span class="cover__string" aria-hidden="true"></span>
+      <button
+        type="button"
+        class="cover__seal"
+        id="cover-open"
+        aria-label="Open the invitation"
+      >
+        <img src="images/seal.png" alt="" aria-hidden="true" />
+      </button>
+      <p class="cover__cue" aria-hidden="true">tap to open</p>
+    </div>
+
     <div class="parchment-container">
       <!-- Sunshine light rays at the top (rays injected by JS) -->
       <div class="light-rays" aria-hidden="true"></div>

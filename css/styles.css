@@ -254,6 +254,45 @@ strong {
   }
 }
 
+/* --------------------------- Music toggle --------------------------- */
+.music-toggle {
+  position: fixed;
+  right: clamp(0.8rem, 2vw, 1.4rem);
+  bottom: clamp(0.8rem, 2vw, 1.4rem);
+  z-index: 900; /* below the cover (1000) so it appears once opened */
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--green-deep);
+  background: var(--green);
+  color: #fff;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 3px 8px rgba(95, 125, 57, 0.35);
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+.music-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(95, 125, 57, 0.4);
+}
+.music-toggle__icon {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+/* a slash through the note when muted/paused */
+.music-toggle.is-paused::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 130%;
+  background: #fff;
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+
 /* --------------------------- Sunshine rays --------------------------- */
 /* Soft light rays fanning down from the top of the page (god-rays look).
    The individual .ray elements are injected by js/script.js. */

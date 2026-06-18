@@ -15,11 +15,42 @@
     opened = true;
     cover.classList.add("is-open");
     document.body.classList.remove("cover-locked");
+    // the tap is a user gesture, so audio is allowed to start here
+    if (window.weddingMusic) window.weddingMusic.play();
     // hide once the doors have finished sliding so it can't block clicks
     setTimeout(() => { cover.style.display = "none"; }, 1300);
   }
   // The whole cover is tappable (the seal is just the focal point).
   cover.addEventListener("click", open);
+})();
+
+/* ---------- 0b. Background music ---------- */
+(function bgMusic() {
+  const audio = document.getElementById("bg-music");
+  const toggle = document.getElementById("music-toggle");
+  if (!audio || !toggle) return;
+  audio.volume = 0.5;
+
+  function reflect(paused) {
+    toggle.classList.toggle("is-paused", paused);
+    toggle.setAttribute("aria-pressed", String(!paused));
+  }
+  function play() {
+    audio.play().then(() => reflect(false)).catch(() => reflect(true));
+  }
+  function pause() {
+    audio.pause();
+    reflect(true);
+  }
+  toggle.addEventListener("click", () => {
+    if (audio.paused) play(); else pause();
+  });
+  audio.addEventListener("play", () => reflect(false));
+  audio.addEventListener("pause", () => reflect(true));
+
+  // let the cover's open() kick it off on the tap gesture
+  window.weddingMusic = { play, pause };
+  reflect(true);
 })();
 
 /* ---------- 1. Scroll-reveal ---------- */

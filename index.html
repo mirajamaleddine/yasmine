@@ -44,6 +44,18 @@
       <p class="cover__cue" aria-hidden="true">tap to open</p>
     </div>
 
+    <!-- Background music (starts on the tap-to-open gesture) -->
+    <audio id="bg-music" src="audio/trimmed.mp3" loop preload="auto"></audio>
+    <button
+      type="button"
+      id="music-toggle"
+      class="music-toggle is-paused"
+      aria-label="Toggle music"
+      aria-pressed="false"
+    >
+      <span class="music-toggle__icon" aria-hidden="true">♪</span>
+    </button>
+
     <div class="parchment-container">
       <!-- Sunshine light rays at the top (rays injected by JS) -->
       <div class="light-rays" aria-hidden="true"></div>

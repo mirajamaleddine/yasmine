@@ -29,7 +29,7 @@
   const audio = document.getElementById("bg-music");
   const toggle = document.getElementById("music-toggle");
   if (!audio || !toggle) return;
-  audio.volume = 0.5;
+  audio.volume = 0.25;
 
   function reflect(paused) {
     toggle.classList.toggle("is-paused", paused);

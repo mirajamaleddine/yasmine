@@ -552,7 +552,7 @@ strong {
   text-align: center;
 }
 .map {
-  width: min(620px, 100%);
+  width: 100%;
   margin: 2rem auto 1rem;
   border-radius: 10px;
 }
@@ -590,7 +590,7 @@ strong {
 }
 .gift-card-container {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   gap: 1rem;
   flex-direction: row;
@@ -603,10 +603,13 @@ strong {
   border: 1px solid var(--line);
   border-radius: 12px;
   padding: 1.2rem 1.4rem;
-  text-align: left;
-  font-family: "Cinzel";
   text-align: center;
+  font-family: "Cinzel";
   flex: 1;
+  /* center the contents vertically so equal-height cards stay balanced */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .gift-card p {
   margin: 0.35rem 0;
@@ -814,6 +817,7 @@ strong {
   }
   .names {
     padding: 0 0.4rem;
+    font-size: 3.5rem;
   }
   .details {
     font-size: 0.92rem;
@@ -822,8 +826,13 @@ strong {
   .member-name {
     font-size: 1rem;
   }
+  .gift-card-container {
+    flex-direction: column;
+  }
   .gift-card {
     text-align: center;
+    /* equal, full width when stacked (overrides the auto side margins) */
+    width: 100%;
   }
   .gift-card p {
     font-size: 0.88rem;
